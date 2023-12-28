@@ -42,10 +42,14 @@ public class FakeStoreProductService implements ProductService{
     }
 
     @Override
-    public String getAllProducts(){
-        RestTemplate restTemplate = restTemplateBuilder.build();
-        ResponseEntity<GenericDto> responseDto = restTemplate.getForEntity(getAllProductsURL, GenericDto.class);
-        return responseDto.getBody().getCategory();
+    public List<Product> getAllProducts(){
+      //  RestTemplate restTemplate = restTemplateBuilder.build();
+     //   ResponseEntity<GenericDto> responseDto = restTemplate.getForEntity(getAllProductsURL, GenericDto.class);
+        return List.of(
+          new Product(),
+          new Product(),
+          new Product()
+        );
         //return "All products";
     }
 }

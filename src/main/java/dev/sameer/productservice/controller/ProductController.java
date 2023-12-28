@@ -27,7 +27,7 @@ public class ProductController {
     }
 
     @GetMapping("all")
-    private String getAllProducts(){
+    private List<Product> getAllProducts(){
         return fakeStoreProductService.getAllProducts();
     }
 }
